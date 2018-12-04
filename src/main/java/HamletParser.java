@@ -49,11 +49,15 @@ public class HamletParser {
 
     public boolean findHamlet() {
 
-        return hamletData.toLowerCase().contains("hamlet");
+        Pattern pattern = Pattern.compile("hamlet", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(hamletData);
+        return matcher.find();
     }
 
     public boolean findHoratio() {
-        return hamletData.toLowerCase().contains("horatio");
+        Pattern pattern = Pattern.compile("horatio", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(hamletData);
+        return matcher.find();
     }
 
     public void toTariq() {

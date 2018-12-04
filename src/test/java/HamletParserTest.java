@@ -16,6 +16,16 @@ public class HamletParserTest {
     }
 
     @Test
+    public void findHamletTest(){
+        Assert.assertTrue(hamletParser.findHamlet());
+    }
+
+    @Test
+    public void findHoratioTest(){
+        Assert.assertTrue(hamletParser.findHoratio());
+    }
+
+    @Test
     public void testChangeHamletToLeon() {
         hamletParser.toLeon();
         Assert.assertFalse(hamletParser.findHamlet());
